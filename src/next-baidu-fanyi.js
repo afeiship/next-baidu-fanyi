@@ -13,8 +13,10 @@
     statics: {
       translate: function(inOptions) {
         var options = nx.mix(null, DEFAULT_OPTIONS, nxFanyiApiSign(inOptions));
-        var url = 'http://api.fanyi.baidu.com/api/trans/vip/translate?' + nx.param(options);
-        return fetch(url).then((res) => res.json());
+        var url = 'http://api.fanyi.baidu.com/api/trans/vip/translate?' + nxParam(options);
+        return fetch(url).then(function(res) {
+          return res.json();
+        });
       }
     }
   });

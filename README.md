@@ -11,6 +11,16 @@ npm install -S @feizheng/next-baidu-fanyi
 | --------- | ------ | --------------- |
 | translate | -      | Get translation |
 
+
+## options
+| name   | default | description         |
+| ------ | ------- | ------------------- |
+| from   | zh      | from which language |
+| to     | en      | to which language   |
+| appid  | -       | -                   |
+| secret | -       | -                   |
+| q      | -       | keywords            |
+
 ## usage
 ```js
 import NxBaiduFanyi from '@feizheng/next-baidu-fanyi';
@@ -27,3 +37,6 @@ NxBaiduFanyi.translate(option).then((res) => {
   */
 });
 ```
+
+## resources
+- https://api.fanyi.baidu.com/doc/21

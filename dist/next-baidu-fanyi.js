@@ -3,7 +3,7 @@
  * description: Baidu fangyi api wrapper.
  * url: https://github.com/afeiship/next-baidu-fanyi
  * version: 1.0.0
- * date: 2019-12-26 12:00:02
+ * date: 2019-12-26 12:09:17
  * license: MIT
  */
 
@@ -22,8 +22,10 @@
     statics: {
       translate: function(inOptions) {
         var options = nx.mix(null, DEFAULT_OPTIONS, nxFanyiApiSign(inOptions));
-        var url = 'http://api.fanyi.baidu.com/api/trans/vip/translate?' + nx.param(options);
-        return fetch(url).then((res) => res.json);
+        var url = 'http://api.fanyi.baidu.com/api/trans/vip/translate?' + nxParam(options);
+        return fetch(url).then(function(res) {
+          return res.json();
+        });
       }
     }
   });
