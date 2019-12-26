@@ -26,7 +26,7 @@ npm install -S @feizheng/next-baidu-fanyi
 import NxBaiduFanyi from '@feizheng/next-baidu-fanyi';
 
 // code goes here:
-NxBaiduFanyi.translate(option).then((res) => {
+NxBaiduFanyi.translate({ q: '苹果', from:'zh', to:'en' }).then((res) => {
   /*
   // res:
   {
