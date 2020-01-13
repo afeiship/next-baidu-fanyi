@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/next-baidu-fanyi",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Baidu fangyi api wrapper.",
   "homepage": "https://github.com/afeiship/next-baidu-fanyi",
   "author": {
@@ -32,6 +32,7 @@
     "yargs": "^15.0.2"
   },
   "dependencies": {
+    "@feizheng/next-delay": "^1.1.0",
     "@feizheng/next-fanyi-api-sign": "^1.0.0",
     "@feizheng/next-js-core2": "^2.0.2",
     "@feizheng/next-param": "^1.0.0",

@@ -3,7 +3,7 @@
  * description: Baidu fangyi api wrapper.
  * url: https://github.com/afeiship/next-baidu-fanyi
  * version: 1.0.0
- * date: 2019-12-26 12:09:17
+ * date: 2020-01-13 10:29:23
  * license: MIT
  */
 
@@ -11,11 +11,13 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
   var fetch = require('node-fetch');
+  var nxDelay = require('@feizheng/next-delay');
   var nxFanyiApiSign = nx.fangyiApiSign || require('@feizheng/next-fanyi-api-sign');
   var nxParam = nx.param || require('@feizheng/next-param');
   var DEFAULT_OPTIONS = {
     from: 'zh',
-    to: 'en'
+    to: 'en',
+    delay: 1000
   };
 
   var NxBaiduFanyi = nx.declare('nx.BaiduFanyi', {
@@ -23,9 +25,11 @@
       translate: function(inOptions) {
         var options = nx.mix(null, DEFAULT_OPTIONS, nxFanyiApiSign(inOptions));
         var url = 'http://api.fanyi.baidu.com/api/trans/vip/translate?' + nxParam(options);
-        return fetch(url).then(function(res) {
-          return res.json();
-        });
+        return fetch(url)
+          .then(nxDelay(options.delay))
+          .then(function(res) {
+            return res.json();
+          });
       }
     }
   });
