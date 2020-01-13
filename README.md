@@ -15,6 +15,7 @@ npm install -S @feizheng/next-baidu-fanyi
 ## options
 | name   | default | description         |
 | ------ | ------- | ------------------- |
+| delay  | 1000    | Call fn duration.   |
 | from   | zh      | from which language |
 | to     | en      | to which language   |
 | appid  | -       | -                   |
