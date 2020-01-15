@@ -2,8 +2,8 @@
  * name: @feizheng/next-baidu-fanyi
  * description: Baidu fangyi api wrapper.
  * url: https://github.com/afeiship/next-baidu-fanyi
- * version: 1.0.0
- * date: 2020-01-13 10:29:23
+ * version: 1.1.0
+ * date: 2020-01-15 10:01:02
  * license: MIT
  */
 
