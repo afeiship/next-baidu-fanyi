@@ -58,5 +58,26 @@
         done();
       });
     });
+
+    test('translate multil zh->zh', function(done) {
+      var option = {
+        q: '你好计算机\n你好阿飞',
+        from: 'zh',
+        to: 'zh'
+      };
+      sleep.sleep(1);
+      NxBaiduFanyi.translate(option).then((res) => {
+        console.log(res);
+        expect(res).toEqual({
+          from: 'zh',
+          to: 'zh',
+          trans_result: [
+            { src: '你好计算机', dst: '你好计算机' },
+            { src: '你好阿飞', dst: '你好阿飞' }
+          ]
+        });
+        done();
+      });
+    });
   });
 })();
