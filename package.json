@@ -43,5 +43,11 @@
     "@jswork/next-fanyi-api-sign": "^1.0.0",
     "@jswork/next-param": "^1.0.0",
     "node-fetch": "^2.6.1"
-  }
+  },
+  "keywords": [
+    "next",
+    "baidu",
+    "fanyi",
+    "api"
+  ]
 }
