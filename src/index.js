@@ -43,6 +43,6 @@
   });
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = nx.baiduFanyi;
+    module.exports = NxBaiduFanyi;
   }
 })();

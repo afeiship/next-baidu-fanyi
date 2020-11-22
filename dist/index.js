@@ -3,7 +3,7 @@
  * description: Baidu fangyi api wrapper.
  * homepage: https://github.com/afeiship/next-baidu-fanyi
  * version: 1.0.0
- * date: 2020-11-22 17:53:20
+ * date: 2020-11-22 17:59:47
  * license: MIT
  */
 
@@ -52,6 +52,6 @@
   });
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = nx.baiduFanyi;
+    module.exports = NxBaiduFanyi;
   }
 })();

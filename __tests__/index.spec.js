@@ -1,6 +1,6 @@
 (function () {
-  require('../src');
 
+  const NxBaiduFanyi = require('../src');
   const sleep = require('sleep');
 
   describe('NxBaiduFanyi.methods', function () {
