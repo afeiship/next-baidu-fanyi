@@ -1,6 +1,6 @@
 {
-  "name": "@feizheng/next-baidu-fanyi",
-  "version": "1.2.2",
+  "name": "@jswork/next-baidu-fanyi",
+  "version": "1.0.0",
   "description": "Baidu fangyi api wrapper.",
   "homepage": "https://github.com/afeiship/next-baidu-fanyi",
   "author": {
@@ -9,36 +9,39 @@
   },
   "scripts": {
     "build": "gulp",
-    "test": "jest"
+    "test": "jest",
+    "start": "node ./express.js",
+    "release": "release-it"
   },
-  "main": "dist/next-baidu-fanyi.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
-    "@feizheng/gulp-pkg-header": "^1.0.2",
-    "@feizheng/rake-git": "^1.2.1",
-    "del": "^5.1.0",
+    "@jswork/gulp-pkg-header": "^1.0.2",
+    "@jswork/next": "^1.0.2",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
     "gulp-debug": "^4.0.0",
+    "gulp-header": "^2.0.9",
     "gulp-ignore": "^3.0.0",
-    "gulp-load-plugins": "^2.0.2",
+    "gulp-load-plugins": "^2.0.5",
     "gulp-rename": "^2.0.0",
     "gulp-size": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "jest": "^25.1.0",
-    "sleep": "^6.1.0",
-    "uglify-save-license": "^0.4.1",
-    "yargs": "^15.1.0"
-  },
-  "dependencies": {
-    "@feizheng/next-delay": "^1.1.1",
-    "@feizheng/next-fanyi-api-sign": "^1.0.1",
-    "@feizheng/next-js-core2": "^2.4.1",
-    "@feizheng/next-param": "^1.1.1",
-    "node-fetch": "^2.6.0"
+    "jest": "^26.6.3",
+    "prettier": "^2.1.2",
+    "release-it": "^14.2.1",
+    "sleep": "^6.3.0",
+    "uglify-js": "3.11.6",
+    "uglify-save-license": "^0.4.1"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "@jswork/next-delay": "^1.0.0",
+    "@jswork/next-fanyi-api-sign": "^1.0.0",
+    "@jswork/next-param": "^1.0.0",
+    "node-fetch": "^2.6.1"
   }
 }

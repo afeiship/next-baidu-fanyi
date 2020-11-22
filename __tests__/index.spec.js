@@ -1,10 +1,10 @@
-(function() {
-  var nx = require('@feizheng/next-js-core2');
-  var NxBaiduFanyi = require('../src/next-baidu-fanyi');
-  var sleep = require('sleep');
+(function () {
+  require('../src');
 
-  describe('NxBaiduFanyi.methods', function() {
-    test('translate apple to english', function(done) {
+  const sleep = require('sleep');
+
+  describe('NxBaiduFanyi.methods', function () {
+    test('translate apple to english', function (done) {
       var option = {
         q: '苹果'
       };
@@ -21,7 +21,7 @@
 
     // sleep 1s
 
-    test('translate apple to de', function(done) {
+    test('translate apple to de', function (done) {
       var option = {
         q: '苹果',
         to: 'de'
@@ -40,7 +40,7 @@
       });
     });
 
-    test('translate apple to cht', function(done) {
+    test('translate apple to cht', function (done) {
       var option = {
         q: '你好计算机',
         to: 'cht'
@@ -59,7 +59,7 @@
       });
     });
 
-    test('translate multil zh->zh', function(done) {
+    test('translate multil zh->zh', function (done) {
       var option = {
         q: '你好计算机\n你好阿飞',
         from: 'zh',
