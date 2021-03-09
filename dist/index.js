@@ -3,12 +3,12 @@
  * description: Baidu fangyi api wrapper.
  * homepage: https://github.com/afeiship/next-baidu-fanyi
  * version: 1.0.0
- * date: 2020-11-22 18:01:43
+ * date: 2021-03-09 09:14:30
  * license: MIT
  */
 
 (function () {
-  var global = global || this || window || Function('return this')();
+  var global = typeof window !== 'undefined' ? window : this || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var fetch = require('node-fetch');
   var nxDelay = require('@jswork/next-delay');
@@ -34,7 +34,7 @@
             var res = {
               from: _from,
               to: _to,
-              trans_result: nx.map(items, function (index, value) {
+              trans_result: nx.map(items, function (_, value) {
                 return { src: value, dst: value };
               })
             };
