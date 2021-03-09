@@ -2,8 +2,8 @@
  * name: @jswork/next-baidu-fanyi
  * description: Baidu fangyi api wrapper.
  * homepage: https://github.com/afeiship/next-baidu-fanyi
- * version: 1.0.0
- * date: 2021-03-09 09:14:30
+ * version: 1.0.1
+ * date: 2021-03-09 09:15:21
  * license: MIT
  */
 
