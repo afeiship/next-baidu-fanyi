@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-baidu-fanyi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Baidu fangyi api wrapper.",
   "homepage": "https://js.work",
   "author": {
@@ -50,5 +50,11 @@
     "@jswork/next-fanyi-api-sign": "^1.0.2",
     "@jswork/next-param": "^1.0.11",
     "node-fetch": "2.6.7"
-  }
+  },
+  "keywords": [
+    "next",
+    "baidu",
+    "fanyi",
+    "api"
+  ]
 }
