@@ -1,12 +1,16 @@
 {
   "name": "@jswork/next-baidu-fanyi",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Baidu fangyi api wrapper.",
   "homepage": "https://js.work",
   "author": {
     "name": "afei",
     "email": "1290657123@qq.com"
   },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
   "scripts": {
     "build": "gulp",
     "test": "jest",
@@ -19,9 +23,9 @@
   "devDependencies": {
     "@babel/core": "^7.21.3",
     "@babel/preset-env": "^7.20.2",
-    "@jswork/gulp-pkg-header": "^1.0.8",
-    "@jswork/gulp-registry": "^1.0.22",
-    "@jswork/next": "^1.1.7",
+    "@jswork/gulp-pkg-header": "^1.0.11",
+    "@jswork/gulp-registry": "^1.0.45",
+    "@jswork/next": "^1.2.2",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -48,8 +52,7 @@
   "dependencies": {
     "@jswork/next-delay": "^1.0.0",
     "@jswork/next-fanyi-api-sign": "^1.0.2",
-    "@jswork/next-param": "^1.0.11",
-    "node-fetch": "2.6.7"
+    "@jswork/next-param": "^1.0.12"
   },
   "keywords": [
     "next",

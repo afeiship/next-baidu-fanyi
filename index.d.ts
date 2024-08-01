@@ -8,6 +8,8 @@ interface Options {
 }
 
 interface TranslateResult {
+  error_code?: string;
+  error_msg?: string;
   from: string;
   to: string;
   trans_result: {
@@ -18,6 +20,6 @@ interface TranslateResult {
 
 interface NxStatic {
   BaiduFanyi: {
-    translate(opts: Options): Promise<TranslateResult>;
+    translate(opts: Options): Promise<TranslateResult> 
   };
 }

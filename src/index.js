@@ -1,5 +1,4 @@
 import nx from '@jswork/next';
-import fetch from 'node-fetch';
 
 import '@jswork/next-delay';
 import '@jswork/next-fanyi-api-sign';
