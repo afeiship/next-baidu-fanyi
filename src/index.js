@@ -14,7 +14,7 @@ const NxBaiduFanyi = nx.declare('nx.BaiduFanyi', {
   statics: {
     translate: function (inOptions) {
       const options = nx.mix(null, defaults, nx.fanyiApiSign(inOptions));
-      const url = 'http://api.fanyi.baidu.com/api/trans/vip/translate?' + nx.param(options);
+      const url = nx.param(options, 'http://api.fanyi.baidu.com/api/trans/vip/translate');
       const _from = options.from;
       const _to = options.to;
       const _query = options.q;
