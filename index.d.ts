@@ -1,5 +1,5 @@
 interface Options {
-  q: string;
+  q: string | string[];
   from: string;
   to: string | string[];
   appid?: string;
@@ -20,6 +20,6 @@ interface TranslateResult {
 
 interface NxStatic {
   BaiduFanyi: {
-    translate(opts: Options): Promise<TranslateResult> 
+    translate(opts: Options): Promise<TranslateResult>
   };
 }

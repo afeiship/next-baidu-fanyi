@@ -1,10 +1,8 @@
 const NxBaiduFanyi = require('../src');
 const sleep = require('sleep');
 
-jest.setTimeout(60000);
-
-describe('NxBaiduFanyi.methods', function () {
-  test('translate apple to english', function (done) {
+describe('NxBaiduFanyi.methods', function() {
+  test('translate apple to english', function(done) {
     var option = {
       q: '苹果'
     };
@@ -21,7 +19,7 @@ describe('NxBaiduFanyi.methods', function () {
 
   // sleep 1s
 
-  test('translate apple to de', function (done) {
+  test('translate apple to de', function(done) {
     var option = {
       q: '苹果',
       to: 'de'
@@ -40,7 +38,7 @@ describe('NxBaiduFanyi.methods', function () {
     });
   });
 
-  test('translate apple to cht', function (done) {
+  test('translate apple to cht', function(done) {
     var option = {
       q: '你好计算机',
       to: 'cht'
@@ -59,7 +57,7 @@ describe('NxBaiduFanyi.methods', function () {
     });
   });
 
-  test('translate multil zh->zh', function (done) {
+  test('translate multil zh->zh', function(done) {
     var option = {
       q: '你好计算机\n你好阿飞',
       from: 'zh',
@@ -79,4 +77,26 @@ describe('NxBaiduFanyi.methods', function () {
       done();
     });
   });
+
+
+  test.only('translate multiple en->en', async () => {
+    const option = {
+      q: ['apple', 'banana', 'orange'],
+      from: 'en',
+      to: 'zh'
+    };
+
+    const res = await NxBaiduFanyi.translate(option);
+    expect(res).toEqual({
+        from: 'en',
+        to: 'zh',
+        trans_result: [
+          { src: 'apple', dst: '苹果' },
+          { src: 'banana', dst: '香蕉' },
+          { src: 'orange', dst: '橙色' }
+        ]
+      }
+    );
+  });
+
 });
